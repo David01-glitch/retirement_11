@@ -1,5 +1,6 @@
 import Hero from '../sections/Hero';
 import Hobbies from '../sections/Hobbies';
+import Story from '../sections/Story';
 import Articles from '../sections/Articles';
 import Projects from '../sections/Projects';
 import Community from '../sections/Community';
@@ -13,6 +14,7 @@ export default function Home() {
     <>
       <Hero />
       <Hobbies />
+      <Story />
       <Articles />
       <Projects />
       <Community />

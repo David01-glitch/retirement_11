@@ -3,16 +3,26 @@ import { Sprout, Mail, MapPin, Facebook, Instagram, Youtube, Send } from 'lucide
 
 const QUICK = [
   { name: 'Home', path: '/' },
+  { name: 'About Us', path: '/about' },
   { name: 'Community', path: '/community' },
   { name: 'Tutorials', path: '/tutorials' },
   { name: 'Blog', path: '/blog' },
-  { name: 'Contact', path: '/contact' },
+  { name: 'Contact Us', path: '/contact' },
 ];
 const CATS = [
   { name: 'Gardening', path: '/gardening' },
   { name: 'Painting', path: '/painting' },
   { name: 'Woodworking', path: '/woodworking' },
+  { name: 'Knitting', path: '/knitting' },
   { name: 'DIY Crafts', path: '/diy-crafts' },
+  { name: 'Pottery', path: '/pottery' },
+];
+const LEGAL = [
+  { name: 'Privacy Policy', path: '/privacy' },
+  { name: 'Terms & Conditions', path: '/terms' },
+  { name: 'Refund Policy', path: '/refund' },
+  { name: 'About Us', path: '/about' },
+  { name: 'Contact Us', path: '/contact' },
 ];
 
 export default function Footer() {
@@ -74,12 +84,20 @@ export default function Footer() {
           </div>
         </div>
 
+        <div className="py-8 border-b border-cream-50/10">
+          <ul className="flex flex-wrap gap-x-6 gap-y-2 justify-center text-sm">
+            {LEGAL.map((l) => (
+              <li key={l.name}>
+                <Link to={l.path} className="text-cream-100/75 hover:text-cream-50 transition">{l.name}</Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-cream-100/60">
           <div>© {new Date().getFullYear()} Retirement Hobby Hub. Made with care in Phoenix, Arizona.</div>
-          <div className="flex gap-6">
-            <Link to="/" className="hover:text-cream-50">Privacy</Link>
-            <Link to="/" className="hover:text-cream-50">Terms</Link>
-            <Link to="/contact" className="hover:text-cream-50">Contact</Link>
+          <div className="text-center sm:text-right">
+            245 Cedar Lane, Phoenix, AZ 85001, USA · retirementhobbyhub@gmail.com
           </div>
         </div>
       </div>

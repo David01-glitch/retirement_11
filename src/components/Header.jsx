@@ -7,6 +7,7 @@ import { trackEvent } from '../utils/analytics';
 
 const LINKS = [
   { name: 'Home', path: '/' },
+  { name: 'About', path: '/about' },
   { name: 'Gardening', path: '/gardening' },
   { name: 'DIY Crafts', path: '/diy-crafts' },
   { name: 'Woodworking', path: '/woodworking' },
@@ -52,7 +53,7 @@ export default function Header() {
         </Link>
 
         <nav className="hidden lg:flex items-center gap-1">
-          {LINKS.slice(0, 7).map((l) => (
+          {LINKS.slice(0, 8).map((l) => (
             <NavLink key={l.name} to={l.path} end={l.path === '/'} onClick={() => onNav(l.name)} className={navClasses}>
               {l.name}
             </NavLink>
