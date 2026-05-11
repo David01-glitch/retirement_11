@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  body {
+    @apply bg-cream-50 text-wood-800 font-sans;
+    font-size: 17px;
+    line-height: 1.7;
+  }
+  h1, h2, h3, h4 { @apply font-serif text-wood-800; }
+  :focus-visible { @apply outline-2 outline-olive-500 outline-offset-2; }
+  ::selection { background: #A3B18A; color: #FBF8F3; }
+}
+
+@layer components {
+  .container-wide { @apply max-w-7xl mx-auto px-5 sm:px-8 lg:px-12; }
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-7 py-4 bg-olive-600 text-cream-50 font-semibold text-base shadow-soft hover:bg-olive-700 hover:shadow-warm transition-all duration-300 active:scale-[0.98];
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-7 py-4 bg-cream-50 text-wood-800 font-semibold border-2 border-wood-400/50 hover:border-olive-500 hover:text-olive-700 transition-all duration-300;
+  }
+  .glass-card {
+    @apply bg-cream-50/70 backdrop-blur-md border border-cream-200/80 rounded-2xl shadow-soft;
+  }
+  .wood-card {
+    @apply bg-gradient-to-br from-cream-50 to-cream-100 border border-cream-200 rounded-3xl shadow-soft;
+  }
+  .tag {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-olive-500/10 text-olive-700;
+  }
+  .heading-eyebrow {
+    @apply text-sm font-semibold uppercase tracking-[0.18em] text-terracotta-600;
+  }
+  .section-title {
+    @apply font-serif text-4xl sm:text-5xl font-semibold text-wood-800 leading-tight;
+  }
+}
+
+.bg-grain {
+  background-image:
+    radial-gradient(rgba(125,85,50,0.05) 1px, transparent 1px),
+    radial-gradient(rgba(125,85,50,0.04) 1px, transparent 1px);
+  background-size: 24px 24px, 36px 36px;
+  background-position: 0 0, 12px 18px;
+}
+.text-balance { text-wrap: balance; }
