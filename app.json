@@ -1,0 +1,14 @@
+{
+  "name": "Retirement Hobby Hub",
+  "description": "A premium blog + hobby community platform for retirees and adults 50+ (gardening, woodworking, painting, knitting, crafts).",
+  "repository": "https://github.com/David01-glitch/retirement_11",
+  "keywords": ["react", "vite", "tailwindcss", "framer-motion", "blog", "community"],
+  "stack": "heroku-24",
+  "buildpacks": [
+    { "url": "heroku/nodejs" }
+  ],
+  "env": {
+    "NODE_ENV": { "value": "production" },
+    "NPM_CONFIG_PRODUCTION": { "value": "false" }
+  }
+}
